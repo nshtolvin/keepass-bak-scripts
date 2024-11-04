@@ -19,6 +19,15 @@ CreateKeePassBackup.new.ps1 [-InputFile <input_filename>] [-OutputArchive <outpu
 ```
 If you do not specify any parameters when calling the script, they work as old version scripts, i.e. they search the current directory for a KeePass password database named _"keydb.kdbx"_ and create an archive named _"keepass_backup.zip"_.
 
+To run ps1-scripts, you may need to change the PowerShell execution policy. To allow the script to run, first run
+```powershell
+Set-ExecutionPolicy {RemoteSigned|Unrestricted}
+```
+, and after running the script, restore the default policy
+```powershell
+Set-ExecutionPolicy {Default|Restricted}
+```
+
 ## Allowed usage
 For [CreateKeePassBackup.new.bat](CreateKeePassBackup.new.bat) script:
 ```bat
